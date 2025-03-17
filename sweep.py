@@ -9,27 +9,6 @@ with open("sweep.cfg", "r") as file:
     sweep_config = yaml.safe_load(file)
 
 
-sweep_config = {
-    "method": "bayes",
-    "metric": {"name": "val_accuracy", "goal": "maximize"},
-    "early_terminate": {
-        "type": "hyperband",
-        "min_iter": 3,
-        "max_iter": 10,
-    },
-    "parameters": {
-        "num_layers": {"values": [3, 5]},
-        "hidden_size": {"values": [64, 128]},
-        "weight_decay": {"values": [0.0005, 0.5]},
-        "learning_rate": {"values": [1e-3]},
-        "optimizer": {"values": ["sgd", "momentum", "nag", "rmsprop", "adam", "nadam"]},
-        "batch_size": {"values": [64]},
-        "weight_init": {"values": ["xavier"]},
-        "activation": {"values": ["relu"]},
-        "epochs": {"values": [5, 10]}
-    }
-}
-
 sweep_id = wandb.sweep(sweep_config, project="fashion-mnist")
 
 def load_data():

@@ -13,7 +13,7 @@ def get_args():
     parser.add_argument("-e", "--epochs", type=int, default=10, help="Number of epochs")
     parser.add_argument("-b", "--batch_size", type=int, default=128, help="Batch size")
     parser.add_argument("-l", "--loss", type=str, choices=["MSE", "cross-entropy"], default="cross-entropy", help="Loss function")
-    parser.add_argument("-o", "--optimizer", type=str, choices=["SGD", "momentum", "nesterov", "RMSprop", "Adam"], default="RMSprop", help="Optimizer")
+    parser.add_argument("-o", "--optimizer", type=str, choices=["sgd", "momentum", "nag", "rmsprop", "adam", "nadam"], default="nadam", help="Optimizer")
     parser.add_argument("-lr", "--learning_rate", type=float, default=0.001, help="Learning rate")
     parser.add_argument("-m", "--momentum", type=float, default=0, help="Momentum for optimizers")
     parser.add_argument("-beta", "--beta", type=float, default=0.9, help="Beta for rmsprop")

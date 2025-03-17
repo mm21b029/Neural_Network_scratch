@@ -89,7 +89,7 @@ The table below describes the available arguments, their accepted values, and de
 | `-e` | `--epochs` | Any integer | `10` |
 | `-b` | `--batch_size` | Any integer | `128` |
 | `-l` | `--loss` | `MSE`, `cross-entropy` | `cross-entropy` |
-| `-o` | `--optimizer` | `SGD`, `momentum`, `nesterov`, `RMSprop`, `Adam` | `RMSprop` |
+| `-o` | `--optimizer` | `sgd`, `momentum`, `nag`, `rmsprop`, `adam` | `rmsprop` |
 | `-lr` | `--learning_rate` | Any float | `0.001` |
 | `-m` | `--momentum` | Any float | `0` |
 | `-beta` | `--beta` | Any float | `0.9` |
@@ -105,7 +105,7 @@ The table below describes the available arguments, their accepted values, and de
 #### Example Usage
 Run training with custom parameters:
 ```bash
-python train.py -e 20 -b 64 -lr 0.0005 -o Adam -a relu
+python train.py -e 20 -b 32 -lr 0.0005 -o adam -a relu
 ```
 
 For more details, use:
