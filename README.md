@@ -1,5 +1,6 @@
 # Neural Network Implementation from scratch
 
+Link to Github repo: https://github.com/mm21b029/Neural_Network_scratch
 WandB report link: https://wandb.ai/hemachandra0801-iit-madras/fashion-mnist/reports/DA6401-Assignment-1--VmlldzoxMTg0MTM0Ng
 
 ## Installation
